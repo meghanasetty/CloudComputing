@@ -12,6 +12,7 @@ We performed our recommendation system on an Explicit Data where there is data o
 ### Alternating Least Square :
 In this approach, we are trying to recommend books to users by predicting the user rating for all the books and this predicted rating is obtained for all the users to each and every book in the dataset through Matrix factorization. If we consider a matrix between User and Book, where each cell in the matrix is a rating given by the user to the book, this is a very sparse matrix. ALS is an optimization approach of finding the two Matrix factors (User matrix and Book matrix) for the sparse matrix where multiplying the matrix factors will result in predicted ratings of each user to each book. 
 <br>
+![ALSmat](https://user-images.githubusercontent.com/15541211/70202236-1abbe780-16e7-11ea-97fc-7d5e1882981d.PNG)
 Here in the picture, U is a user matrix of size (Number of users X Number of latent factors) and V is an item matrix of size (Number of latent factors  X Number of items)
 <br>The goal here is to find U,V such that R = U X V by solving the below equation.
 
