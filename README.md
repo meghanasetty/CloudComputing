@@ -26,7 +26,7 @@ Here in the picture, U is a user matrix of size (Number of users X Number of lat
 ![itemsequ](https://user-images.githubusercontent.com/15541211/70202350-666e9100-16e7-11ea-808c-6c3fa6ebddb8.PNG)
 5. Repeat the steps 3 and 4 for 60 iterations
 6. Compute predicted ratings for all the books and users by multiplying the user and books matrices.
-7. <br>Output the top 15 books (which are not rated before) with highest predicted ratings per user. 
+7. Output the top 15 books (which are not rated before) with highest predicted ratings per user. 
 
 ### KNN Cosine Similarity :
 In this approach, we are trying to recommend books to a user based on other similar users. We will be finding the cosine similarity between the users based on the common books they read and find k nearest neighbors for the particular user. We predict the rating of the books for the user based on the books we recommended.
