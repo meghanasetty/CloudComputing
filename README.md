@@ -132,7 +132,9 @@ http://stanford.edu/~rezab/classes/cme323/S15/notes/lec14.pdf
 
 https://medium.com/radon-dev/als-implicit-collaborative-filtering-5ed653ba39fe
 
+https://towardsdatascience.com/how-did-we-build-book-recommender-systems-in-an-hour-part-2-k-nearest-neighbors-and-matrix-c04b3c2ef55c
 
+https://en.wikipedia.org/wiki/Cosine_similarity
 
 
 
