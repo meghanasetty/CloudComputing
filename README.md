@@ -16,6 +16,7 @@ In this approach, we are trying to recommend books to users by predicting the us
 Here in the picture, U is a user matrix of size (Number of users X Number of latent factors) and V is an item matrix of size (Number of latent factors  X Number of items)
 <br>The goal here is to find U,V such that R = U X V by solving the below equation.
 ![equation](https://user-images.githubusercontent.com/15541211/70202318-522a9400-16e7-11ea-93c9-6d7cc3fe4a08.PNG)
+
 <em><u>Steps involved for implementing in PySpark:</u></em><br>
 1. Generating ratings RDD in the form (UserID, BookID, Rating)
 2. Initializing user and book matrix of 15 latent features with random values
