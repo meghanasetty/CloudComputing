@@ -15,14 +15,14 @@ In this approach, we are trying to recommend books to users by predicting the us
 ![ALSmat](https://user-images.githubusercontent.com/15541211/70202236-1abbe780-16e7-11ea-97fc-7d5e1882981d.PNG)
 Here in the picture, U is a user matrix of size (Number of users X Number of latent factors) and V is an item matrix of size (Number of latent factors  X Number of items)
 <br>The goal here is to find U,V such that R = U X V by solving the below equation.
-
+![equation](https://user-images.githubusercontent.com/15541211/70202318-522a9400-16e7-11ea-93c9-6d7cc3fe4a08.PNG)
 <em><u>Steps involved for implementing in PySpark:</u></em><br>
 1. Generating ratings RDD in the form (UserID, BookID, Rating)
 2. Initializing user and book matrix of 15 latent features with random values
 3. Compute User matrix by considering book matrix as constant. Below is the equation to compute.
- 
+ ![usersequ](https://user-images.githubusercontent.com/15541211/70202339-6078b000-16e7-11ea-9412-0ed1366720fd.PNG)
 4. Compute Book matrix by considering user matrix as constant. Below is the equation to compute.
-
+![itemsequ](https://user-images.githubusercontent.com/15541211/70202350-666e9100-16e7-11ea-808c-6c3fa6ebddb8.PNG)
 5. Repeat the steps 3 and 4 for 60 iterations
 6. Compute predicted ratings for all the books and users by multiplying the user and books matrices.
 7. <br>Output the top 15 books (which are not rated before) with highest predicted ratings per user. 
@@ -110,7 +110,8 @@ The Dataset used for this Project is found in this link https://github.com/zygmu
 ## Performance Evaluation:
 We determined Root Mean Square Error-values for both the approaches User-based(KNN) and
 User-Item(ALS) to evaluate the performance of the approaches.
-
+### ALS:
+Overall Average RMSE is **3.91751520938**
 ### KNN:
 ('RMSE error:', <strong>0.48284271247461896</strong>)
 
