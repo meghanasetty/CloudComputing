@@ -31,6 +31,7 @@ Here in the picture, U is a user matrix of size (Number of users X Number of lat
 ### KNN Cosine Similarity :
 In this approach, we are trying to recommend books to a user based on other similar users. We will be finding the cosine similarity between the users based on the common books they read and find k nearest neighbors for the particular user. We predict the rating of the books for the user based on the books we recommended.
 <br>Cosine Similarity is the measure of calculating the angle between two vectors.
+<img width="428" alt="cosine" src="https://user-images.githubusercontent.com/15541211/70203670-acc5ef00-16eb-11ea-9ba9-773a809fae58.png">
 
 <br>where, Ai and Bi are components of vector A and B respectively.
 
