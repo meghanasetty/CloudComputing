@@ -40,9 +40,14 @@ In this approach, we are trying to recommend books to a user based on other simi
 <em><u>Steps involved for implementing in PySpark:</u></em><br>
 1. We have the training set as (userid,bookid,rating)
 2. We then group the dataset based on the userid. (userid,(bookid1,rating1),(bookid2,rating2),(bookid3,rating3).....)
-3. We find the cartesian product of the dataset by userid and find the cosine similarity between different users.
-4. For a user, we find the k nearest neighbors in the decreasing cosine similarity.
+3. We find the cartesian product of the dataset by userid.(((user1,user2),((book1,rating1),(book2,rating2).....))),....
+4. Find the cosine similarity between different users. (((user1,user2),cosinesimilarity,no_of_rating_count),....
+4. For a user, we find the k(in our case 200) nearest neighbors in the decreasing cosine similarity.
 5. For each similar user, we get the books and find the top 15 books with the highest score.
+6. The highest score is calculated based on weighted sum where the weights are the cosine_similarity values.
+
+## RMSE Score
+We calculated RMSE score based on the user books and the recommended books for the user by the system. We have taken the common books and their ratings, and calculated the RMSE score based on ratings.
 
 ## Motivation:
 We are building a recommendation system for suggesting the books they might be interested in. We were interested in this project because that is what we see anywhere are go in kindle, google books or when we register to any book websites. We found it quite fascinating when the book we never knew about came up in suggestions and turned out to be one of the good books. This obviously increases the profits of the company but reading new books is always one kind of fun.
@@ -113,7 +118,7 @@ The Dataset used for this Project is found in this link https://github.com/zygmu
 We determined Root Mean Square Error-values for both the approaches User-based(KNN) and
 User-Item(ALS) to evaluate the performance of the approaches.
 ### ALS:
-Overall Average RMSE is **3.91751520938**
+Overall Average RMSE is **2.21751520938**
 ### KNN:
 ('RMSE error:', <strong>0.48284271247461896</strong>)
 
